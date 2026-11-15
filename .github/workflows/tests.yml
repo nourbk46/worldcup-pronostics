@@ -1,0 +1,33 @@
+name: Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Compiler l'API
+        run: dotnet build backend/backend.csproj
+      # À ajouter en semaine 6 :
+      # - name: Tests unitaires
+      #   run: dotnet test tests/Backend.UnitTests --collect:"XPlat Code Coverage"
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - name: Compiler le front-end
+        run: npm run build
+        env:
+          CI: false

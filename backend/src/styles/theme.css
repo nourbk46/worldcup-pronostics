@@ -1,0 +1,31 @@
+:root {
+  /* Couleurs principales */
+  --burgundy: #8B1A1A;
+  --burgundy-light: #b43d55;
+  --burgundy-dark: #660019;
+  --burgundy-soft: #fff5f7;
+  --white: #ffffff;
+  --grey: #f0e9e9;
+  --grey-dark: #6b5a5a;
+  --orange: #ff9800;
+  
+  /* Pour les effets box-shadow */
+  --burgundy-rgb: 128, 0, 32;
+  
+  
+  /* Autres variables utiles */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+  --transition-default: all 0.3s ease;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}
+
+/* Pour le dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #1a1a1a;
+    --burgundy-soft: #2a1a21;
+  }
+}

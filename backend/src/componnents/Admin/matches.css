@@ -1,0 +1,358 @@
+/* ================= LAYOUT ================= */
+
+.matches-layout {
+  display: flex;
+  flex-direction: column
+  
+}
+
+.matches-main {
+  flex: 1;
+  margin-left: 50px;
+  position: relative;
+  background-color: var(--white);
+}
+
+/* ================= BACKGROUND IMAGE ================= */
+
+.matches-back-image {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  overflow: hidden;
+  margin-bottom: -5px;
+}
+
+.matches-back-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.matches-image-text-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  margin-top: -20px; 
+}
+
+.matches-image-title {
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 2px;
+  max-width: 60%;
+}
+.matches-content p {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 600px;
+}
+.matches-image-subtitle {
+  color: white;
+  font-size: 18px;
+  max-width: 60%;
+  line-height: 1.5;
+}
+
+/* Contenu principal - MODIFIÉ pour aligner avec l'image */
+.matches-content {
+  padding: 20px 40px;
+  max-width: 100%; /* Changé de 1200px à 100% */
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box; /* Important pour inclure le padding dans la largeur */
+}
+
+
+/* ================= LOGO ================= */
+.matches-logo-overlay {
+  position: absolute;
+  top: 80px;
+  right: 210px;
+  height: 70px;
+  z-index: 1;
+  filter: white;
+}
+
+
+
+.matches-logo-right {
+  height: 10px; /* Ajustez selon la taille souhaitée */
+  width: 10px;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* ================= CONTENT ================= */
+
+.matches-content-wrapper {
+  padding: 20px 10px;
+}
+
+.matches-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.matches-section-title {
+  color: var(--burgundy);
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+
+
+}
+
+/* ================= BUTTON ADD ================= */
+
+.matches-btn-add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 13px;
+  background-color: var(--burgundy);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.matches-btn-add:hover {
+   background-color: var(--burgundy-dark); /* Version plus foncée du burgundy */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(139, 0, 0, 0.2);
+}
+.matches-btn-add:active {
+  transform: translateY(0);
+}
+.matches-btn-icon {
+  font-size: 14px;
+}
+/* ================= TABLE ================= */
+
+.matches-white-table-container {
+  background-color: var(--white);
+  overflow: hidden;
+  width: 100%; /* Prend toute la largeur */
+  border-radius: 8px;
+}
+
+.matches-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.matches-table th {
+  padding: 18px 20px;
+  text-align: left;
+  font-weight: 700;
+  color: #495057;
+  font-size: 14px;
+}
+
+.matches-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #eaeaea;
+  color: #333;
+  font-weight: 500;
+}
+.matches-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.matches-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.matches-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.matches-table th,
+  .matches-table td {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  .white-table-container {
+    overflow-x: auto;
+  }
+
+  .matches-table {
+    min-width: 600px;
+  }
+
+  /* AJOUTER ce conteneur pour le tableau */
+.table-container-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px; /* Même padding que .admin-content */
+  box-sizing: border-box;
+}
+
+/* Styles pour le tableau des utilisateurs */
+.matches-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.matches-table thead {
+  border-bottom: 2px solid #dee2e6;
+  background-color: #f8f9fa;
+}
+/* ================= STATUS & SCORE ================= */
+
+.matches-score-badge,
+.matches-status-badge {
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.matches-score-final {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.matches-score-pending {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.matches-status-completed {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.matches-status-upcoming {
+  background: #fce4ec;
+  color: #ad1457;
+}
+
+/* ================= ACTION BUTTONS ================= */
+
+.matches-actions-cell {
+  display: flex;
+  gap: 10px;
+}
+
+.matches-btn-score-icon,
+.matches-btn-modify-icon,
+.matches-btn-delete-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 20%;
+  border: none;
+  cursor: pointer;
+  background: var(--burgundy);
+  color: white;
+}
+
+/* ================= MODAL ================= */
+
+.matches-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.matches-modal-content {
+  background: white;
+  border-radius: 10px;
+  width: 500px;
+}
+
+.matches-modal-close {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+.matches-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+
+.matches-modal-header {
+  background: var(--burgundy);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.matches-modal-form {
+  padding: 20px;
+}
+
+.matches-form-group {
+  margin-bottom: 15px;
+}
+
+.matches-form-group input,
+.matches-form-group select {
+  width: 100%;
+  padding: 10px;
+}
+
+.matches-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.matches-btn-submit {
+  background: var(--burgundy);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+}
+
+.matches-btn-cancel {
+   padding: 10px 14px;
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}

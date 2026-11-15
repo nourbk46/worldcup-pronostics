@@ -1,0 +1,55 @@
+:root {
+  /* Couleurs principales */
+  --burgundy: #0f256b;            /* Bordeaux foncé principal */
+  --burgundy-light: #093db4
+;      /* Bordeaux clair */
+  --burgundy-dark: #0d1e57;       /* Bordeaux très foncé */
+  --burgundy-soft: #fff5f7;       /* Bordeaux très clair / fond */
+  --burgundy-side: rgba(128, 0, 32, 0.3); /* Pour survol et overlay */
+  --burgundy-rgb: 128, 0, 32;     /* RGB pour dégradés / shadows */
+
+  /* Couleurs neutres */
+  --white: #ffffff;
+  --grey-soft: #f0e9e9;           /* Fond très clair */
+  --grey: #e3e3e6;                 /* Gris moyen */
+  --grey-dark: #6b5a5a;            /* Gris foncé */
+  --grey2: #666666;                /* Gris texte */
+  --dark1: rgba(0, 0, 0, 0.1);     /* Ombre légère */
+  
+  /* Couleurs accent */
+  --orange: #ff9800;
+  --brown: rgba(255, 152, 0, 0.1); /* Ombre orange légère */
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+  /* Bordures / rayons */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-card: 8px;
+
+  /* Espacements */
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Transitions */
+  --transition-default: all 0.3s ease;
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #1a1a1a;
+    --grey-soft: #2a2a2a;
+    --grey: #444444;
+    --grey-dark: #6b5a5a;
+    --grey2: #aaa;
+    --burgundy-soft: #2a1a21;
+    --burgundy-light: #b43d55;
+  }
+}
